@@ -12,6 +12,7 @@ class Book(models.Model):
         ('Programming', 'Programming'),
         ('Computer Science', 'Computer Science'),
     ]
+    code = models.CharField(max_length=10, unique=True) 
     title = models.CharField(max_length=200)
     author = models.CharField(max_length=200)
     category = models.CharField(max_length=100, choices=CATEGORY_CHOICES)
@@ -27,6 +28,9 @@ class BorrowedBook(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     book = models.ForeignKey(Book, on_delete=models.CASCADE)
     borrow_date = models.DateField(auto_now_add=True)
+
+    class Meta:
+        unique_together = ['user', 'book']
 
     def __str__(self):
         return f"{self.user.username} - {self.book.title}"
