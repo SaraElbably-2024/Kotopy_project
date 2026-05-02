@@ -1,0 +1,702 @@
+[
+  {
+    "model": "books.book",
+    "pk": 1,
+    "fields": {
+      "code": "S001",
+      "title": "Atomic Habits",
+      "author": "James Clear",
+      "category": "Self Help",
+      "year": 2018,
+      "copies": 10,
+      "description": "Tiny changes, remarkable results. A guide to building good habits.",
+      "image": "books/atomic_habits.png"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 2,
+    "fields": {
+      "code": "S002",
+      "title": "Miracle Morning",
+      "author": "Hal Elrod",
+      "category": "Self Help",
+      "year": 2012,
+      "copies": 8,
+      "description": "A powerful morning routine to transform your life.",
+      "image": "books/the-miracle_morning.jpg"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 3,
+    "fields": {
+      "code": "S003",
+      "title": "The Power of Now",
+      "author": "Eckhart Tolle",
+      "category": "Self Help",
+      "year": 1997,
+      "copies": 6,
+      "description": "A guide to spiritual enlightenment and living in the present.",
+      "image": "books/the_power_of_now.jpg"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 4,
+    "fields": {
+      "code": "S004",
+      "title": "Make Your Bed",
+      "author": "William H. McRaven",
+      "category": "Self Help",
+      "year": 2017,
+      "copies": 7,
+      "description": "Small habits that can change your life and maybe the world.",
+      "image": "books/make_your_bed.jpg"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 5,
+    "fields": {
+      "code": "S005",
+      "title": "Deep Work",
+      "author": "Cal Newport",
+      "category": "Self Help",
+      "year": 2016,
+      "copies": 9,
+      "description": "Rules for focused success in a distracted world.",
+      "image": "books/deep_work.jpg"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 6,
+    "fields": {
+      "code": "S006",
+      "title": "Rich Dad Poor Dad",
+      "author": "Robert Kiyosaki",
+      "category": "Self Help",
+      "year": 1997,
+      "copies": 12,
+      "description": "Lessons on money, investing, and financial independence.",
+      "image": "books/rich_dad_poor_dad.jpg"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 7,
+    "fields": {
+      "code": "S007",
+      "title": "When The Body Says No",
+      "author": "Gabor Maté",
+      "category": "Self Help",
+      "year": 2003,
+      "copies": 5,
+      "description": "Explores the connection between stress and illness.",
+      "image": "books/when_the_body_says_no.jpg"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 8,
+    "fields": {
+      "code": "S008",
+      "title": "How To Heal Your Inner Child",
+      "author": "Simon Chapple",
+      "category": "Self Help",
+      "year": 2021,
+      "copies": 6,
+      "description": "A guide to emotional healing and self-discovery.",
+      "image": "books/how_to_heal_your_inner_child.jpg"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 9,
+    "fields": {
+      "code": "S009",
+      "title": "فن الكلام",
+      "author": "إيهاب فكري",
+      "category": "Self Help",
+      "year": 2018,
+      "copies": 7,
+      "description": "دليل عملي لتحسين مهارات التواصل والتحدث بثقة.",
+      "image": "books/فن_الكلام.jpg"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 10,
+    "fields": {
+      "code": "S010",
+      "title": "محاط بالمرضى النفسيين",
+      "author": "توماس إريكسون",
+      "category": "Self Help",
+      "year": 2019,
+      "copies": 6,
+      "description": "يساعدك على فهم الشخصيات الصعبة والتعامل معها بذكاء.",
+      "image": "books/محاط_مرضي_نفسيين.jpg"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 11,
+    "fields": {
+      "code": "S011",
+      "title": "سيكولوجية الإنسان المقهور",
+      "author": "مصطفى حجازي",
+      "category": "Self Help",
+      "year": 2005,
+      "copies": 5,
+      "description": "تحليل عميق للحالة النفسية في المجتمعات المضغوطة.",
+      "image": "books/سيكولوجيا_الانسان_المقهور.jpg"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 12,
+    "fields": {
+      "code": "S012",
+      "title": "عندما يقول الجسد لا",
+      "author": "غابور ماتيه",
+      "category": "Self Help",
+      "year": 2003,
+      "copies": 6,
+      "description": "يربط بين الضغوط النفسية وتأثيرها على الصحة الجسدية.",
+      "image": "books/when_the_body_says_no_CGlDNpi.jpg"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 13,
+    "fields": {
+      "code": "S013",
+      "title": "المخ ذكر أم أنثى؟",
+      "author": "د. عمرو شريف",
+      "category": "Self Help",
+      "year": 2016,
+      "copies": 4,
+      "description": "يستعرض الفروق بين عقول الرجال والنساء بطريقة علمية مبسطة.",
+      "image": "books/المخ_ذكر_أم_أنثى.jpg"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 14,
+    "fields": {
+      "code": "S014",
+      "title": "فهم الأمراض النفسية",
+      "author": "دين برنيت",
+      "category": "Self Help",
+      "year": 2015,
+      "copies": 5,
+      "description": "شرح مبسط للاضطرابات النفسية وكيفية التعامل معها.",
+      "image": "books/فهم_الامراض_النفسية.jpg"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 15,
+    "fields": {
+      "code": "S015",
+      "title": "الصحة النفسية",
+      "author": "د. أحمد خيري حافظ",
+      "category": "Self Help",
+      "year": 2017,
+      "copies": 5,
+      "description": "دليل للحفاظ على التوازن النفسي وتحسين جودة الحياة.",
+      "image": "books/الصحه_النفسيه.jpg"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 16,
+    "fields": {
+      "code": "S016",
+      "title": "اكتب حتى لا أصاب بالجنون",
+      "author": "مريم التميمي",
+      "category": "Self Help",
+      "year": 2021,
+      "copies": 6,
+      "description": "رحلة مع الكتابة كوسيلة للتعبير والتفريغ النفسي.",
+      "image": "books/Aktop7ataLa2sabBalgonon.jpg"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 17,
+    "fields": {
+      "code": "S017",
+      "title": "مستعمل",
+      "author": "محمد عصام",
+      "category": "Self Help",
+      "year": 2022,
+      "copies": 4,
+      "description": "نظرة مختلفة للحياة والعلاقات من خلال تجارب واقعية.",
+      "image": "books/مستعمل.jpg"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 18,
+    "fields": {
+      "code": "F001",
+      "title": "قضية عنب الثعلب",
+      "author": "ميرنا المهدي",
+      "category": "Fiction",
+      "year": 2021,
+      "copies": 6,
+      "description": "قضية غامضة مليئة بالتشويق والأحداث غير المتوقعة.",
+      "image": "books/3enab-el-tha3lab.jpg"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 19,
+    "fields": {
+      "code": "F002",
+      "title": "أبادول",
+      "author": "حنان لاشين",
+      "category": "Fiction",
+      "year": 2018,
+      "copies": 8,
+      "description": "رحلة خيالية في عالم مليء بالصراعات والقيم الإنسانية.",
+      "image": "books/abadol.jpg"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 20,
+    "fields": {
+      "code": "F003",
+      "title": "أمواج أكما",
+      "author": "عمرو عبد الحميد",
+      "category": "Fiction",
+      "year": 2016,
+      "copies": 7,
+      "description": "قصة مشوقة في عالم خيالي مليء بالغموض.",
+      "image": "books/amwag_akma.jpg"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 21,
+    "fields": {
+      "code": "F004",
+      "title": "إيكادولي",
+      "author": "حنان لاشين",
+      "category": "Fiction",
+      "year": 2019,
+      "copies": 6,
+      "description": "رواية فانتازيا عن عالم مختلف وقوانين غير مألوفة.",
+      "image": "books/ekadoly.jpg"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 22,
+    "fields": {
+      "code": "F005",
+      "title": "في ممر الفئران",
+      "author": "أحمد خالد توفيق",
+      "category": "Fiction",
+      "year": 2016,
+      "copies": 10,
+      "description": "رواية فلسفية سوداوية عن الحرية والسيطرة.",
+      "image": "books/fe-mmr-el-fe2ran.jpg"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 23,
+    "fields": {
+      "code": "F006",
+      "title": "قواعد جارتين",
+      "author": "عمرو عبد الحميد",
+      "category": "Fiction",
+      "year": 2018,
+      "copies": 9,
+      "description": "عالم خيالي تحكمه قوانين صارمة وصراعات قوية.",
+      "image": "books/garten_rules.jpg"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 24,
+    "fields": {
+      "code": "F007",
+      "title": "هيبتا",
+      "author": "محمد صادق",
+      "category": "Fiction",
+      "year": 2014,
+      "copies": 11,
+      "description": "تحليل لمراحل الحب السبعة بأسلوب درامي مؤثر.",
+      "image": "books/hebta.jpg"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 25,
+    "fields": {
+      "code": "F008",
+      "title": "خوف",
+      "author": "أسامة المسلم",
+      "category": "Fiction",
+      "year": 2017,
+      "copies": 7,
+      "description": "رواية رعب نفسية مليئة بالغموض والإثارة.",
+      "image": "books/khof.jpg"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 26,
+    "fields": {
+      "code": "F009",
+      "title": "قضية لوز مر",
+      "author": "ميرنا المهدي",
+      "category": "Fiction",
+      "year": 2020,
+      "copies": 5,
+      "description": "قضية جديدة مليئة بالألغاز والتشويق.",
+      "image": "books/loz-mr.jpg"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 27,
+    "fields": {
+      "code": "F010",
+      "title": "قضية مخالب القط",
+      "author": "ميرنا المهدي",
+      "category": "Fiction",
+      "year": 2022,
+      "copies": 6,
+      "description": "جريمة غامضة تحتاج إلى تحليل دقيق لكشف الحقيقة.",
+      "image": "books/makhaleb.jpg"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 28,
+    "fields": {
+      "code": "F011",
+      "title": "مِنتو",
+      "author": "عمرو عبد الحميد",
+      "category": "Fiction",
+      "year": 2020,
+      "copies": 6,
+      "description": "رواية خيالية في عالم مليء بالأسرار.",
+      "image": "books/minto.jpg"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 29,
+    "fields": {
+      "code": "F012",
+      "title": "أرض زيكولا 2: أماريتا",
+      "author": "عمرو عبد الحميد",
+      "category": "Fiction",
+      "year": 2016,
+      "copies": 8,
+      "description": "الجزء الثاني من أرض زيكولا، حيث تستكمل الرحلة في عالم أماريتا المليء بالغموض والتحديات.",
+      "image": "books/photo_2_2026-04-11_17-32-35.jpg"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 30,
+    "fields": {
+      "code": "F013",
+      "title": "يوتوبيا",
+      "author": "أحمد خالد توفيق",
+      "category": "Fiction",
+      "year": 2008,
+      "copies": 10,
+      "description": "رواية ديستوبية تكشف الفجوة بين الطبقات الاجتماعية في مجتمع قاسٍ ومظلم.",
+      "image": "books/photo_4_2026-04-11_17-32-35.jpg"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 31,
+    "fields": {
+      "code": "F014",
+      "title": "صديقي السيكوباتي",
+      "author": "ميرنا المهدي",
+      "category": "Fiction",
+      "year": 2022,
+      "copies": 6,
+      "description": "قصة نفسية مشوقة تكشف خبايا شخصية غامضة وعلاقات معقدة.",
+      "image": "books/photo_3_2026-04-11_17-32-35.jpg"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 32,
+    "fields": {
+      "code": "F015",
+      "title": "وجع البنفسج",
+      "author": "أسامة المسلم",
+      "category": "Fiction",
+      "year": 2021,
+      "copies": 7,
+      "description": "رواية مليئة بالغموض والمشاعر العميقة في عالم من الأسرار والتشويق.",
+      "image": "books/photo_1_2026-04-11_17-32-35.jpg"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 33,
+    "fields": {
+      "code": "R001",
+      "title": "بيوت منورة",
+      "author": "هالة سمير",
+      "category": "Religious",
+      "year": 2020,
+      "copies": 7,
+      "description": "كتاب يتناول قصصًا واقعية ملهمة عن البيوت المليئة بالإيمان.",
+      "image": "books/buit_menwarah.jpg"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 34,
+    "fields": {
+      "code": "R002",
+      "title": "إلى الله",
+      "author": "أمير منير",
+      "category": "Religious",
+      "year": 2019,
+      "copies": 8,
+      "description": "رحلة روحية للتقرب إلى الله بأسلوب بسيط ومؤثر.",
+      "image": "books/ela_Allah.jpg"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 35,
+    "fields": {
+      "code": "R003",
+      "title": "فاتتني صلاة",
+      "author": "إسلام جمال",
+      "category": "Religious",
+      "year": 2017,
+      "copies": 10,
+      "description": "كتاب يوضح أهمية الصلاة وكيفية الالتزام بها.",
+      "image": "books/fatetni_salah.jpg"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 36,
+    "fields": {
+      "code": "R004",
+      "title": "كوني صحابية",
+      "author": "حنان لاشين",
+      "category": "Religious",
+      "year": 2018,
+      "copies": 6,
+      "description": "دعوة للفتيات للاقتداء بالصحابيات في الأخلاق والسلوك.",
+      "image": "books/konie_sahabia.png"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 37,
+    "fields": {
+      "code": "R005",
+      "title": "منهجية السير إلى الله",
+      "author": "د. علي أبو الحسن",
+      "category": "Religious",
+      "year": 2021,
+      "copies": 5,
+      "description": "دليل عملي للسير في طريق الإيمان والتقرب إلى الله.",
+      "image": "books/Manhagiah_Alsaier_ela_Allah.webp"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 38,
+    "fields": {
+      "code": "R006",
+      "title": "رسائل من القرآن",
+      "author": "أدهم شرقاوي",
+      "category": "Religious",
+      "year": 2016,
+      "copies": 9,
+      "description": "تأملات ورسائل مستوحاة من آيات القرآن الكريم.",
+      "image": "books/rsaael_men_AlQuran.jpg"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 39,
+    "fields": {
+      "code": "R007",
+      "title": "زاد",
+      "author": "إسلام جمال",
+      "category": "Religious",
+      "year": 2019,
+      "copies": 7,
+      "description": "زاد إيماني يساعدك على الثبات في طريق الطاعة.",
+      "image": "books/zad.webp"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 40,
+    "fields": {
+      "code": "R008",
+      "title": "والذين معه",
+      "author": "أدهم شرقاوي",
+      "category": "Religious",
+      "year": 2020,
+      "copies": 6,
+      "description": "قصص ومواقف من حياة الصحابة تسلط الضوء على القيم الإيمانية والإنسانية.",
+      "image": "books/wa_alzen_ma3ah.jpg"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 41,
+    "fields": {
+      "code": "R009",
+      "title": "نحن نقص عليك",
+      "author": "أدهم شرقاوي",
+      "category": "Religious",
+      "year": 2019,
+      "copies": 7,
+      "description": "عرض قصصي جميل لعدد من قصص الأنبياء بأسلوب مبسط ومؤثر.",
+      "image": "books/na7n_nakos_3alek.jpg"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 42,
+    "fields": {
+      "code": "SC001",
+      "title": "Clean Code",
+      "author": "Robert C. Martin",
+      "category": "Programming",
+      "year": 2008,
+      "copies": 10,
+      "description": "A handbook of agile software craftsmanship and writing clean, maintainable code.",
+      "image": "books/clean-code.jpg"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 43,
+    "fields": {
+      "code": "SC002",
+      "title": "Data Structures & Algorithm Analysis",
+      "author": "Mark Allen Weiss",
+      "category": "Programming",
+      "year": 2014,
+      "copies": 8,
+      "description": "Comprehensive guide to data structures and algorithm efficiency.",
+      "image": "books/ds-and-algo.webp"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 44,
+    "fields": {
+      "code": "SC003",
+      "title": "Computer Networking",
+      "author": "Jason Callaway",
+      "category": "Computer Science",
+      "year": 2013,
+      "copies": 6,
+      "description": "Introduction to networking concepts, protocols, and infrastructure.",
+      "image": "books/network book1.jpeg"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 45,
+    "fields": {
+      "code": "SC004",
+      "title": "Introduction to Algorithms",
+      "author": "Thomas H. Cormen",
+      "category": "Computer Science",
+      "year": 2009,
+      "copies": 9,
+      "description": "One of the most important books in algorithms and problem solving.",
+      "image": "books/OIP (1).webp"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 46,
+    "fields": {
+      "code": "SC005",
+      "title": "Java Programming",
+      "author": "Joyce Farrell",
+      "category": "Programming",
+      "year": 2018,
+      "copies": 7,
+      "description": "Beginner-friendly guide to learning Java programming.",
+      "image": "books/java.jpg"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 47,
+    "fields": {
+      "code": "SC006",
+      "title": "Python Programming",
+      "author": "Eric Matthes",
+      "category": "Programming",
+      "year": 2019,
+      "copies": 11,
+      "description": "Hands-on introduction to Python for beginners.",
+      "image": "books/python.jpg"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 48,
+    "fields": {
+      "code": "SC007",
+      "title": "Google Flutter Guide",
+      "author": "Prajyot Mainkar",
+      "category": "Programming",
+      "year": 2020,
+      "copies": 5,
+      "description": "Guide to building cross-platform mobile apps using Flutter.",
+      "image": "books/flutter.jpg"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 49,
+    "fields": {
+      "code": "SC008",
+      "title": "AI Engineering",
+      "author": "Chip Huyen",
+      "category": "Computer Science",
+      "year": 2023,
+      "copies": 6,
+      "description": "Practical guide to building and deploying AI systems.",
+      "image": "books/ai engineering.jpg"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 50,
+    "fields": {
+      "code": "SC009",
+      "title": "Pro MySQL NDB Cluster",
+      "author": "Jesper Wisborg Krogh",
+      "category": "Computer Science",
+      "year": 2017,
+      "copies": 4,
+      "description": "Advanced guide to MySQL clustering and database systems.",
+      "image": "books/mysql.jpg"
+    }
+  }
+]
