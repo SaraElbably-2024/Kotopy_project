@@ -1,0 +1,246 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Books — Kotoby{% endblock %}
+
+{% block extra_css %}
+<style>
+  /* book_list inherits home_about.css body style — no override needed */
+  /* just ensure text is readable on the gradient background */
+
+  .books-page {
+    min-height: calc(100vh - 120px);
+    padding: 3rem 2rem 5rem;
+  }
+
+  .books-header {
+    max-width: 1200px;
+    margin: 0 auto 2.5rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .books-title {
+    font-family: 'Georgia', serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    color: white;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    margin: 0;
+  }
+
+  .books-count {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-family: 'Courier New', monospace;
+  }
+
+  /* Filter bar */
+  .filter-bar {
+    max-width: 1200px;
+    margin: 0 auto 2.5rem;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .filter-btn {
+    padding: 0.45rem 1.1rem;
+    border: 1.5px solid rgba(255,255,255,0.4);
+    background: transparent;
+    color: rgba(255,255,255,0.8);
+    border-radius: 999px;
+    font-size: 0.82rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+    font-family: inherit;
+  }
+
+  .filter-btn:hover, .filter-btn.active {
+    background: white;
+    border-color: white;
+    color: #4400a3;
+  }
+
+  /* Grid */
+  .books-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 1.8rem;
+  }
+
+  /* Card */
+  .book-card {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s, box-shadow 0.25s;
+    backdrop-filter: blur(6px);
+  }
+
+  .book-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 28px rgba(0,0,0,0.3);
+    background: rgba(255,255,255,0.18);
+  }
+
+  .book-cover {
+    width: 100%; aspect-ratio: 3/4; object-fit: cover; display: block;
+    background: rgba(255,255,255,0.1);
+  }
+
+  .book-cover-placeholder {
+    width: 100%; aspect-ratio: 3/4;
+    background: rgba(255,255,255,0.08);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 3rem; color: rgba(255,255,255,0.4);
+  }
+
+  .book-body {
+    padding: 1rem 1.1rem 1.3rem;
+    flex: 1; display: flex; flex-direction: column; gap: 0.3rem;
+  }
+
+  .book-category {
+    font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em;
+    color: #b09ee0; font-family: 'Courier New', monospace;
+  }
+
+  .book-title {
+    font-family: 'Georgia', serif; font-size: 1rem; font-weight: bold;
+    color: white; line-height: 1.3; margin: 0;
+  }
+
+  .book-author { font-size: 0.82rem; color: rgba(255,255,255,0.6); }
+
+  .book-copies { font-size: 0.75rem; color: rgba(255,255,255,0.45); margin-top: auto; padding-top: 0.5rem; }
+  .book-copies.out { color: #ff7b6b; }
+
+  .book-actions { padding: 0 1.1rem 1.1rem; }
+
+  .btn-borrow {
+    display: block; width: 100%; padding: 0.6rem;
+    background: white; color: #4400a3; border: none; border-radius: 8px;
+    font-size: 0.85rem; cursor: pointer; text-align: center;
+    text-decoration: none; transition: background 0.2s; font-weight: 700;
+  }
+
+  .btn-borrow:hover { background: #9a84c4; color: white; }
+
+  .btn-return {
+    display: block; width: 100%; padding: 0.6rem;
+    background: transparent; color: #ff7b6b;
+    border: 1.5px solid #ff7b6b; border-radius: 8px;
+    font-size: 0.85rem; cursor: pointer; text-align: center;
+    text-decoration: none; transition: all 0.2s;
+  }
+
+  .btn-return:hover { background: #d9534f; color: white; border-color: #d9534f; }
+
+  .btn-disabled {
+    display: block; width: 100%; padding: 0.6rem;
+    background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.3);
+    border: none; border-radius: 8px; font-size: 0.85rem; text-align: center; cursor: not-allowed;
+  }
+
+  .btn-login {
+    display: block; width: 100%; padding: 0.6rem;
+    background: transparent; color: rgba(255,255,255,0.6);
+    border: 1.5px solid rgba(255,255,255,0.3); border-radius: 8px;
+    font-size: 0.85rem; text-align: center; text-decoration: none; transition: all 0.2s;
+  }
+
+  .btn-login:hover { border-color: white; color: white; }
+
+  /* Messages */
+  .messages-bar { max-width: 1200px; margin: 0 auto 1.5rem; }
+  .alert { padding: 0.8rem 1.2rem; border-radius: 8px; font-size: 0.88rem; margin-bottom: 0.5rem; }
+  .alert-success { background: rgba(40,167,69,0.25); border: 1px solid #28a745; }
+  .alert-warning { background: rgba(255,193,7,0.2);  border: 1px solid #ffc107; color: #ffc107; }
+  .alert-error   { background: rgba(220,53,69,0.25); border: 1px solid #dc3545; }
+
+  .empty-state {
+    grid-column: 1/-1; text-align: center; padding: 4rem 2rem;
+    color: rgba(255,255,255,0.6); font-family: 'Georgia', serif; font-size: 1.2rem;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="books-page">
+
+  {% if messages %}
+  <div class="messages-bar">
+    {% for msg in messages %}
+      <div class="alert alert-{{ msg.tags }}">{{ msg }}</div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <div class="books-header">
+    <h1 class="books-title">Our Collection</h1>
+    <span class="books-count">{{ books.count }} book{{ books.count|pluralize }}</span>
+  </div>
+
+  <div class="filter-bar">
+    <a href="{% url 'book_list' %}"
+       class="filter-btn {% if not selected_category %}active{% endif %}">All</a>
+    {% for val, label in categories %}
+      <a href="{% url 'book_list' %}?category={{ val }}"
+         class="filter-btn {% if selected_category == val %}active{% endif %}">{{ label }}</a>
+    {% endfor %}
+  </div>
+
+  <div class="books-grid">
+    {% for book in books %}
+    <div class="book-card">
+
+      {% if book.image %}
+        <img class="book-cover" src="{{ book.image.url }}" alt="{{ book.title }}">
+      {% else %}
+        <div class="book-cover-placeholder">📖</div>
+      {% endif %}
+
+      <div class="book-body">
+        <span class="book-category">{{ book.category }}</span>
+        <h3 class="book-title">{{ book.title }}</h3>
+        <p class="book-author">{{ book.author }} · {{ book.year }}</p>
+        <p class="book-copies {% if book.copies == 0 %}out{% endif %}">
+          {% if book.copies > 0 %}{{ book.copies }} cop{{ book.copies|pluralize:"y,ies" }} available
+          {% else %}Out of stock{% endif %}
+        </p>
+      </div>
+
+      <div class="book-actions">
+        {% if user.is_authenticated %}
+          {% if book.id in borrowed_ids %}
+            <a href="{% url 'return_book' book.id %}" class="btn-return">↩ Return Book</a>
+          {% elif book.copies > 0 %}
+            <a href="{% url 'borrow_book' book.id %}" class="btn-borrow">+ Borrow Book</a>
+          {% else %}
+            <span class="btn-disabled">Out of Stock</span>
+          {% endif %}
+        {% else %}
+          <a href="/accounts/login/" class="btn-login">Login to Borrow</a>
+        {% endif %}
+      </div>
+
+    </div>
+    {% empty %}
+    <div class="empty-state">No books found in this category.</div>
+    {% endfor %}
+  </div>
+
+</div>
+{% endblock %}
